@@ -73,6 +73,11 @@
 			<version>3.0.4</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+	        <groupId>mysql</groupId>
+	        <artifactId>mysql-connector-java</artifactId>
+	        <version>8.0.30</version>  <!-- 최신 버전으로 수정 -->
+	    </dependency>
 	</dependencies>
 
 	<build>
