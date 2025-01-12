@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.practice.mapper.ReserveMapper">
+    <insert id="insertReserveMng">
+        INSERT INTO TB_ROOM(
+                            ROOM_NAME,
+                            DEFAULT_SEAT_COUNT,
+                            DEFAULT_OPER_UNIT,
+                            DEFAULT_OPER_START_TIME,
+                            DEFAULT_OPER_END_TIME,
+                            USE_YN,
+                            DEL_YN
+                           )
+                     VALUES(
+                           #{roomName},
+                           #{defaultSeatCount},
+                           #{defaultOperUnit},
+                           #{defaultOperStartTime},
+                           #{defaultOperEndTime},
+                           #{useYn},
+                           #{delYn}
+                           )
+    </insert>
+
+	<select id="getTotalCount" parameterType="map" resultType="int">
+	    SELECT COUNT(*) FROM TB_ROOM
+	</select>
+
+    <select id="getReserveList" resultType="ReserveMngVO">
+	    SELECT *
+	      FROM TB_ROOM
+	     LIMIT #{pageSize} OFFSET #{offset}
+	</select>
+
+
+</mapper>
