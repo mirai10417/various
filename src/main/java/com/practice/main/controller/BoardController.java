@@ -7,17 +7,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.practice.main.service.BoardServiceImpl;
-import com.practice.main.vo.BoardVO;
+import com.practice.vo.BoardVO;
 
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
 @Controller
 public class BoardController {
 	
 	private final BoardServiceImpl homeServiceImpl;
 	
-	public BoardController(BoardServiceImpl homeServiceImpl) {
-        this.homeServiceImpl = homeServiceImpl;
-    }
-
 	@ResponseBody
 	@GetMapping(value = "/api/test")
 	public List<BoardVO> Home() {

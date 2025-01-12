@@ -17,7 +17,7 @@ mybatis:
   configuration:
     map-underscore-to-camel-case: true  # 스네이크 케이스를 카멜 케이스로 자동 매핑
   mapper-locations: classpath:mapper/*.xml  # 매퍼 XML 파일의 위치
-  type-aliases-package: com.practice.main.vo  # 타입 별칭이 정의된 패키지
+  type-aliases-package: com.practice.vo  # 타입 별칭이 정의된 패키지
 
 
   
