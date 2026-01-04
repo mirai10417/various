@@ -1,4 +1,4 @@
-package com.practice.controller.Check;
+package com.practice.controller.check;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.GetMapping;
